@@ -1,0 +1,14 @@
+String myIp = null;
+		String myHostname = null;
+		try {
+			InetAddress ia = InetAddress.getLocalHost();
+			
+			 myHostname = ia.getHostName();
+			 myIp = ia.getHostAddress();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+			fixedIp = myIp.substring(0, myIp.lastIndexOf(".")+1);
+			t1.setText(fixedIp+"0");
+			t2.setText(fixedIp+"254");
+			t3.setText(myHostname);
